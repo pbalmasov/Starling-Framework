@@ -50,6 +50,13 @@ package starling.events
             _shiftKey = shiftKey;
         }
         
+        
+        /** Creates a clone of the Touch object. */
+        public function clone():Touch
+        {
+           return new KeyboardEvent(type,_charCode,_keyCode,_ctrlKey,_altKey,_shiftKey);
+        }
+        
         // prevent default
         
         /** Cancels the keyboard event's default behavior. This will be forwarded to the native
